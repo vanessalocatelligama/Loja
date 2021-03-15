@@ -1,0 +1,472 @@
+/*Menu e páginas geral*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../img/soft.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+.Menu-bar {
+  background: rgb(231, 203, 203);
+  text-align: center;
+}
+
+.Menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  color: white;
+}
+
+.Menu-bar ul li {
+  width: 120px;
+  margin: 12px;
+  padding: 12px;
+}
+.Menu-bar ul li a {
+  text-decoration: none;
+  color: white;
+}
+.active,
+.Menu-bar ul li:hover {
+  background: rgb(240, 180, 180);
+  border: radius 5px;
+}
+.Menu-bar .bi {
+  margin-right: 8px;
+  color: #fff;
+}
+
+.sub-menu-1 {
+  display: none;
+}
+.Menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  background: rgb(240, 180, 180);
+  margin-top: 12px;
+  margin-left: -12px;
+}
+.Menu-bar ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+}
+.Menu-bar ul li:hover .sub-menu-1 ul li {
+  width: 120px;
+  padding: 8px;
+  border-bottom: 1px dotted rgb(238, 203, 203);
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+.Menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+  color: rgb(238, 203, 203);
+}
+
+/*----------------Página de Login e cadastro---------------------*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a.links {
+  display: none;
+}
+
+.content {
+  width: 300px;
+  min-height: 350px;
+  margin: 20px auto;
+  position: relative;
+}
+
+h1 {
+  font-size: 40px;
+  color: rgb(180, 138, 138);
+  padding: 2px 0 10px 0;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+h1:after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient (left,
+    rgba(147, 184, 189, 0) 0%,
+    rgb(231, 203, 203) 20%,
+    rgb(231, 203, 203) 53%,
+    rgb(231, 203, 203) 79%,
+    rgba(147, 184, 189, 0) 100%
+  );
+  background: linear-gradient(
+    left,
+    #fff 100%,
+    rgb(231, 203, 203) 20%,
+    rgb(231, 203, 203) 53%,
+    rgb(231, 203, 203) 79%,
+    #fff 100%
+    );
+}
+p {
+  margin-bottom: 15px;
+}
+
+.content p:first-child {
+  margin: 0px;
+}
+
+label {
+  color: rgb(231, 203, 203);
+  position: relative;
+}
+
+/*------------ placeholder-------------------- */
+::-webkit-input-placeholder {
+  color: #bebcbc;
+  font-style: italic;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #bebcbc;
+  font-style: italic;
+}
+
+input {
+  outline: none;
+}
+
+/*estilo dos input,  menos o checkbox */
+input:not([type='checkbox']) {
+  width: 95%;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #b2b2b2;
+
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(255, 194, 194, 0.6) inset;
+  box-shadow: 0px 1px 4px 0px rgba(255, 194, 194, 0.6) inset;
+
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/*estilo do botão submit */
+input[type='submit'] {
+  width: 100% !important;
+  cursor: pointer;
+  background: rgba(255, 194, 194, 0.6);
+  padding: 8px 5px;
+  color: palevioletred;
+  font-size: 20px;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+/*estilo do botão submit no hover */
+input[type='submit']:hover {
+  background: #5cdff7;
+}
+
+.link {
+  position: absolute;
+  background: #e1eaeb;
+  color: #7f7c7c;
+  left: 0px;
+  height: 20px;
+  width: 260px;
+  padding: 15px 28px 18px 28px;
+  font-size: 14px;
+  text-align: right;
+  border-top: 1px solid #dbe5e8;
+
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.link a {
+  font-weight: bold;
+  background: #4ab3c6;
+  padding: 6px;
+  color: #fff;
+  margin-left: 5px;
+  border: 1px solid #cbd518;
+
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.link a:hover {
+  color: #39bfd7;
+  background: #f7f7f7;
+  border: 1px solid #4ab3c6;
+}
+
+/*Cadastro*/
+#cadastro,
+#login {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 15px 6% 60px 6%;
+  margin: 0 0 25px 0;
+  background: #f7f7f7;
+  border: 1px solid;
+  -webkit-box-shadow: 5px;
+  border-radius: 10px;rgba(147, 184, 189, 0.8)
+  -webkit-animation-duration: 1.0s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+/* Efeito ao clicar no botão ( Cadastre-se ) */
+
+#paralogin:target ~ .content #cadastro {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+#registro:target ~ .content #login {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+/* css responsivo*/
+
+@media only screen and (max-width:980px){
+.Menu-bar{
+  width: 100%;
+}
+.Menu-bar ul{
+  margin: 10px 0;
+  width: 100%;
+}
+.Menu-bar ul li{
+  height: 57px;
+  width: 100%;
+}
+}
+@media only screen and (max-width:600px){
+  body{
+    background: lemonchiffon;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* página de itens menu lateral*/
+.pag-menu{
+  height: 79%;
+  width: 15%;
+  font-size: 14px;
+  float: left;
+  z-index: 2;
+  background-color:rgb(231, 203, 203);
+  }
+  .pag-menu ul{
+    list-style-type: none;
+    margin-left: 10px;
+    }
+
+  .pag-menu ul li{
+    list-style-type: none;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor:pointer;
+   }
+
+   .pag-menu ul li:hover{
+    color: #fff
+   }
+  
+   .pag-menu ul li ul{
+    display:none;
+    z-index:10;
+    top: 77px;
+  }
+   .pag-menu ul li:hover ul{
+ display: block;
+ height: 400px auto;
+ margin-left: 14%;
+ padding:0 100px 10px 10px;
+ position:fixed;
+ background: rgb(231, 203, 203);
+ box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+ }
+
+ .bi-chevron-right {
+   margin-top:4px;
+   margin-right: 8px;
+   float:right
+ }
+@media only screen and (max-width: 980px){
+ .pag-menu{
+   width:34%;
+   z-index: 20;
+   top: 133px;
+   font-size:12px ;
+ }
+ .pag-menu ul li ul{
+   top: 133px;
+ }
+ .pag-menu ul li:hover ul{
+   margin-left:
+ }
+}
+/*--------------------- Itens primeira fileira------------------->*/
+.categorias{
+margin: 50px 0;
+padding: 20px 0;
+transition: 1s;
+cursor: pointer;
+}
+.categorias img{
+  Width: 100%
+}
+.categorias img:Hover{
+  transform:scale(1.1);
+}
+/*--------------------- Promoção botão------------------->*/
+ .titulo{
+   background:rgba(255, 194, 194, 0.6);
+   color:#fff;
+   width:180px;
+   padding: 4px 10px;
+   height:40px;
+   margin-bottom: 30px;
+   display:flex;
+}
+
+.titulo h2{
+  font-size: 24px;
+}
+.titulo::after{
+  content:'';
+  border-top:40px solid rgba(255, 194, 194, 0.6);
+  border-right: 50px solid transparent;
+  position: absolute;
+  display:flex;
+  margin-top: -4px;
+  margin-left: 170px;
+}
+/*--------------------- Promoção item-------------------*/
+.top-product img{
+  width: 100%;
+}
+.direito{
+  display:block;
+  opacity:0;
+  position:relative;
+  top:60%;
+  margin-left:170px;
+  width: 120px;
+}
+.direito .bi {
+  cursor: pointer;
+  background-color:#fff;
+  color:#000;
+  height: 35px;
+  width: 20px;
+  font-size: 20px;
+  padding: 7px;
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+.direito .btn-segundo{
+     background: none !important;
+     border:none !important;
+     box-shadow:none !important;
+}
+.top-product:hover .direito{
+opacity: 1;
+margin-left: 5%;
+transition: 0.5s;
+}
+/*--------------------- Descrição do item-------------------*/
+.botao-produto h3{
+  font-size:20px;
+  font-weight:bold;
+}
+.botao-produto h5{
+  font-size:15px;
+  padding-bottom: 10px;
+}
+
+
+
+/*--------------------- Copia tentativa do item-------------------*/
+
+.top-product img{
+  width: 100%;
+}
+.direito{
+  display:block;
+  opacity:0;
+  position:relative;
+  top:60%;
+  margin-left:170px;
+  width: 120px;
+}
+.direito .bi {
+  cursor: pointer;
+  background-color:#fff;
+  color:#000;
+  height: 35px;
+  width: 20px;
+  font-size: 20px;
+  padding: 7px;
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+.direito .btn-segundo{
+     background: none !important;
+     border:none !important;
+     box-shadow:none !important;
+}
+.top-product:hover .direito{
+opacity: 1;
+margin-left: 5%;
+transition: 0.5s;
+}
+/*--------------------- Descrição do item-------------------*/
+.botao-produto h3{
+  font-size:20px;
+  font-weight:bold;
+}
+.botao-produto h5{
+  font-size:15px;
+  padding-bottom: 10px;
+}
+/*--------------------- Página de contato-------------------*/
+.content-text {
+  width: 380px;
+  min-height: 280x;
+  margin: 20px auto 10px auto;
+  position: relative;
+}
